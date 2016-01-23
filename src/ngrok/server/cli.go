@@ -13,6 +13,7 @@ type Options struct {
 	tlsKey     string
 	logto      string
 	loglevel   string
+	authToken  string
 }
 
 func parseArgs() *Options {
@@ -24,6 +25,7 @@ func parseArgs() *Options {
 	tlsKey := flag.String("tlsKey", "", "Path to a TLS key file")
 	logto := flag.String("log", "stdout", "Write log messages to this file. 'stdout' and 'none' have special meanings")
 	loglevel := flag.String("log-level", "DEBUG", "The level of messages to log. One of: DEBUG, INFO, WARNING, ERROR")
+	authToken := flag.String("authToken", "", "use Auth Token to verify client")
 	flag.Parse()
 
 	return &Options{
