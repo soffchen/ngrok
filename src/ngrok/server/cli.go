@@ -37,5 +37,6 @@ func parseArgs() *Options {
 		tlsKey:     *tlsKey,
 		logto:      *logto,
 		loglevel:   *loglevel,
+		authToken:  *authToken,
 	}
 }
